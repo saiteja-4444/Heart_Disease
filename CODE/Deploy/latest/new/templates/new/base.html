@@ -1,0 +1,127 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <title>Doc</title>
+<style>
+  th,td {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #BCBCBC;
+    word-wrap: break-word;
+}
+.feed_table{
+        margin-left: 50px;
+        margin-right: 50px;
+}
+.index{
+    background:url("/static/image/img.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.container1{
+  background: #f06d06;
+  padding: 40px;
+  margin: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 2px solid #61dafb;
+  border-radius: 1em;
+}
+.form1{
+  background-color: #023349;
+}
+.radio1{
+  padding-left: 80px;
+}
+
+.input1{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #61dafb;
+}
+
+.fieldset1{
+  /* background-color: #ffff; */
+  border: 2px solid #61dafb;
+  border-radius: 1em;
+}
+
+.input1[type="submit"],input[type="reset"]{
+  font-size: 17px;
+  background-color: #61dafb;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.input1[type="submit"]:hover,input[type="reset"]:hover{
+  color: white;
+  background-color: #049ff8;
+
+}
+.back{
+  background:url("/static/image/index.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+ .white{
+ color:white;
+ }
+ .space{
+ margin:10px 20px;
+ padding:7px 7px;
+ background: cyan;
+ width:500px
+ }
+ .gap{
+ padding:10px 20px;
+ }
+</style>
+</head>
+<body>
+  
+  {% if user.is_authenticated %}
+  <nav class="navbar navbar-expand-lg" style="background-color: #DBF682;">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="navbar-brand text-dark" style="margin-left: 1250px;" href="{% url 'logout' %}">Logout</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% else %}
+  <nav class="navbar navbar-expand-lg" style="background-color: #DBF682;">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="navbar-brand active text-dark" aria-current="page" href="{% url 'home_view' %}">User</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-dark" href="{% url 'doctor_login' %}">Doctor</a>
+          </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% endif %}
+    
+  
+      
+      {% block content %}
+        
+      {% endblock content %}
+        
+</body>
+</html>

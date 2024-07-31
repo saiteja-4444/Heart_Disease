@@ -1,0 +1,40 @@
+{% extends 'new/base.html' %}
+
+{% block content %}
+<body>
+    <div style="background-color: #e9ecef;">
+        <a class="navbar-brand text-dark" style="margin-left: 30px;" href="{% url 'doctor_patient_details_all' %}">All</a>
+        <a class="navbar-brand text-dark" style="margin-left: 10px;" href="{% url 'doctor_patient_details_last' %}">Last</a>
+    </div>
+    <br>
+    <div class="feed_table">
+    <table class="table" border="default" style="table-layout: fixed;">
+        <tr>
+            <th>Age</th><th>Marital_status</th><th>Sleep</th>
+            <th>Depression</th><th>Smoking</th><th>Diabetes</th>
+            <th>BP</th><th>Hypersensitivity</th><th>cp</th>
+            <th>trestbps</th><th>chol</th><th>fbs</th>
+            <th>restecg</th><th>thalach</th><th>exang</th>
+            <th>oldpeak</th><th>slope</th><th>ca</th>
+            <th>thal</th><th>result</th>
+            </tr>
+        {% for i in model %}
+        <tr>
+            <td>{{i.Age}}</td><td>{{i.Marital_status}}</td>
+            <td>{{i.Sleep}}</td><td>{{i.Depression}}</td>
+            <td>{{i.Smoking}}</td><td>{{i.Diabetes}}</td>         
+            <td>{{i.BP}}</td><td>{{i.Hypersensitivity}}</td>
+            <td>{{i.cp}}</td><td>{{i.trestbps}}</td>
+
+            <td>{{i.chol}}</td><td>{{i.fbs}}</td>
+            <td>{{i.restecg}}</td><td>{{i.thalach}}</td>
+            <td>{{i.exang}}</td><td>{{i.oldpeak}}</td>         
+            <td>{{i.slope}}</td><td>{{i.ca}}</td>
+            <td>{{i.thal}}</td><td>{{i.result}}</td>
+        </tr>
+        {% endfor %}
+</table>
+</div>
+{% endblock content %}
+</body>
+</html>

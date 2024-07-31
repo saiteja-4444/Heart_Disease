@@ -1,0 +1,31 @@
+{% extends 'new/base.html' %}
+{% block title %}signup{% endblock title %}
+{% load static %}
+
+{% block content %}
+<body class="doctor">
+<center>
+  <div class="jumbotron">
+      <h2>DOCTOR SIGNUP</h2>
+  </div>
+<div class="container">
+<form action={% url 'user_register' %} method="POST">
+    {% csrf_token %}
+    {% for f in form %}
+    <p>
+        {{ f.label_tag }}
+        {{ f }}
+        {% for error in f.errors %}
+          <p style="color: red;">{{error}}</p>
+        {% endfor %}  
+    </p>
+    {% endfor %}
+    <input type="hidden" name="user" value="user">
+    <button type="submit" class="btn btn-primary">Signup</button>
+</form>
+<p style="color: red;">{{ msg }}</p>
+<p>Have an account? <a href="{% url 'doctor_login' %}">Login</a></p>
+</div>
+{% endblock %}
+</body>
+</html>

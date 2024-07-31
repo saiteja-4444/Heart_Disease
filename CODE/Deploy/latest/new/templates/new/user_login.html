@@ -1,0 +1,31 @@
+{% extends 'new/base.html' %}
+{% block title %}Login{% endblock %}
+{% load static %}
+
+{% block content %}
+<body class="login">
+<center>
+    <div class="jumbotron">
+        <h2>USER LOGIN</h2>
+    </div>
+<div class="container">
+<form action={% url 'home_view' %} method="POST">
+    {% csrf_token %}
+    {% for i in form %}
+    <p>
+        {{ i.label_tag }}
+        {{ i }}
+    </p>
+    {% endfor %}
+    <input type="hidden" name='user' value='user'>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+    <p style="color: red;">{{ msg }}</p>
+    <p>Dont have an account? <a href="{% url 'user_register' %}">signup</a></p>
+</div>
+</center>
+
+{% endblock %}
+
+</body>
+</html>

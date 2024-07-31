@@ -1,0 +1,142 @@
+{% extends 'new/base.html' %}
+{% load static %}
+
+
+	
+	{% block content %}
+	<body class="back">
+	<div>
+		<div style="background-color: #e9ecef;">
+		<a class="navbar-brand text-dark" style="margin-left: 30px;" href="{% url 'apredict' %}">Enter Details</a>
+		<a class="navbar-brand text-dark" style="margin-left: 1088px;" href="{% url 'feedback' %}">Feedback</a>
+	</div>
+	<div>
+		<div>
+		<h1 style="text-align:center; color: white;">MYOCARDIAL INFARCTION</h1>
+		
+		</div>
+		 <!-- Main Input For Receiving Query to our ML -->
+		<form class="form-group" action="{% url 'predict' %}"method="post">
+				{% csrf_token %}
+			<div class="row">
+			<div class="gap col-md-6 ">
+	
+			<label class="white"  for="">Age</label>
+			<input type="number" class="space form-control" step="0.01" name="Age" placeholder="Age" required="required" /><br>
+
+			<label class="white" for="">Marital_status</label>
+			<select class="space form-control" name="Marital_status" id="Marital_status">
+				  <option value=0>MARRIED</option>
+				  <option value=1>SINGLE</option>
+			 </select><br>
+
+			 <label class="white" for="">Sleep</label><br>
+			 <div class="radio1">
+			 <input type="radio" id="No" name="Sleep" value=0>
+			 <label class="white" for="No">No</label><br>
+			 <input type="radio" id="Yes" name="Sleep" value=1>
+			 <label class="white" for="Yes">Yes</label><br>
+			</div><br>
+
+			<label class="white" for="">Depression</label><br>
+			 <div class="radio1">
+			 <input type="radio" id="No" name="Depression" value=0>
+			 <label class="white" for="No">No</label><br>
+			 <input type="radio" id="Yes" name="Depression" value=1>
+			 <label class="white" for="Yes">Yes</label><br>
+			</div><br>
+
+			<label class="white" for="">Smoking</label>
+			<select class="space form-control" name="Smoking" id="Smoking">
+				<option value=0>No</option>
+				<option value=1>Yes	</option>
+		   </select><br>
+
+		   <label class="white" for="">Diabetes</label>
+		   <select class="space form-control" name="Diabetes" id="Diabetes">
+			   <option value=0>No</option>
+			   <option value=1>Yes	</option>
+		  </select><br>
+
+			<label class="white"  for="">BP</label>
+			<input type="number" class="space form-control" step="0.01" name="BP" placeholder="BP" required="required" /><br>
+
+			<label class="white" for="">Hypersensitivity</label>
+			<select class="space form-control" name="Hypersensitivity" id="Hypersensitivity">
+				<option value=0>No</option>
+				<option value=1>Yes	</option>
+		   </select><br>
+	
+			<label class="white"  for="">cp</label>
+			<select class="space form-control" name="cp" id="cp">
+				<option value=1>Typical angina</option>
+				<option value=2>Atypical angina</option>
+				<option value=3>Non-anginal pain</option>
+				<option value=4>Asymptomatic</option>
+		   </select><br>
+	
+			<label class="white"  for="">trestbps</label>
+			<input type="number" class="space form-control" step="0.01" name="trestbps" placeholder="trestbps" required="required" /><br>
+		</div>
+			
+	
+	
+	
+	<div class="gap col-md-6">
+			
+			<label class="white"  for="">chol</label>
+			<input type="number" class="space form-control" step="0.01" name="chol" placeholder="chol" required="required" /><br>
+	
+			<label class="white"  for="">fbs</label>
+			<div class="radio1">
+				<input type="radio" id="No" name="fbs" value=0>
+				<label class="white" for="No">No</label><br>
+				<input type="radio" id="Yes" name="fbs" value=1>
+				<label class="white" for="Yes">Yes</label><br>
+			   </div><br>
+			
+			<label class="white"  for="">restecg</label>
+			<select class="space form-control" name="restecg" id="restecg">
+				<option value=0>normal</option>
+				<option value=1>having ST-T wave abnormality</option>
+				<option value=2>probable or definite left ventricular hypertrophy</option>
+		   </select><br>
+	
+			<label class="white"  for="">thalach</label>
+			<input type="number" class="space form-control" step="0.01" name="thalach" placeholder="thalach" required="required" /><br>
+	
+			<label class="white"  for="">exang</label>
+			<input type="number" class="space form-control" step="0.01" name="exang" placeholder="exang" required="required" /><br>
+	
+			<label class="white"  for="">oldpeak</label>
+			<input type="number" class="space form-control" step="0.01" name="oldpeak" placeholder="oldpeak" required="required" /><br>
+			
+			<label class="white" for="">slope</label>
+			<input type="number" class="space form-control" step="0.01" name="slope" placeholder="slope" required="required" /><br>
+	
+			<label class="white"  for="">ca</label>
+			<input type="number" class="space form-control" step="0.01" name="ca" placeholder="ca" required="required" /><br>
+	
+			<label class="white"  for="">thal</label>
+			<input type="number" class="space form-control" step="0.01" name="thal" placeholder="thal" required="required" /><br>
+
+			<input type="hidden" name="result" value="data">
+	</div>	
+	</div>
+	
+	<div style="padding:2% 35%">
+	  <button type="submit" class="btn btn-success btn-block" style="width:350px;padding:20px">Predict</button>		
+	</div>
+		  
+		</form>
+	
+	   <br>
+	   <br>
+	<div  style="background:skyblue;padding:2% 40%">
+	   {{ prediction_text }}
+	</div>
+	 </div>
+
+ {% endblock content %}
+</body>
+</html>

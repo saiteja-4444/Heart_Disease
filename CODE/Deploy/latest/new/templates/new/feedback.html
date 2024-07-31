@@ -1,0 +1,20 @@
+{% extends 'new/base.html' %}
+{% load static %}
+<body class="feedback">
+    {% block content %}
+    <div>
+		<div style="background-color: #e9ecef;">
+		<a class="navbar-brand text-dark" style="margin-left: 30px;" href="{% url 'apredict' %}">Enter Details</a>
+		<a class="navbar-brand text-dark" style="margin-left: 1100px;" href="{% url 'feedback' %}">Feedback</a>
+	</div>
+    <br>
+    <center>
+        <b>DOCTOR FEEDBACK</b>
+        <br><br>
+        {% if model %}
+        {{model.Feedback}}
+        {% endif %}
+    </center>
+    {% endblock content %}
+</body>
+</html>
