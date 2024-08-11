@@ -1,1 +1,1 @@
-# Heart Disease Predectio
+# Heart Disease Predection
