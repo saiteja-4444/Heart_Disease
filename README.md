@@ -15,10 +15,7 @@ There were many machine learning models used in the process of predicting the __
 * [__Logistic Regression__](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 * [__Naive Bayes__](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
 * [__Random Forest Classifier__](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-
-
 ## 👉 Directions to download the repository and run the notebook 
-
 1. You'll have to download and install Git which could be used for cloning the repositories that are present.
 2. Once "Git" is downloaded and installed, you'll have to right-click on the location where you would like to download this repository. I would like to store it in the "Git Folder" location. 
 3. If you have successfully installed Git, you'll get an option called "Gitbash Here" when you right-click on a particular location. 
