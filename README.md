@@ -1,6 +1,6 @@
 <h1 align="center">
-<img src="" align="center" />
- Heart Disease Prediction Using Machine Learning 
+Heart Disease Prediction Using Machine Learning 
+<img src="https://www.ed.ac.uk/sites/default/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/gettyimages-1404145480-ipopba.jpg?itok=BOgBDi02" align="center" />
 </h1>
 
 
