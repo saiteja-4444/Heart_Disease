@@ -5,7 +5,6 @@ Cardiac necrosis employs Machine learning algorithms to analyze the prediction o
 classifying disease in which part of the heart the blood is blocked. This automated approach facilitates early disease 
 diagnosis, enabling timely intervention to mitigate the patients outcome in early prediction and curing of disease.
 ## Getting Started
-
 Before you dive into the tutorials and examples in this repository, make sure you have the following prerequisites:
 
 - Basic programming knowledge (preferably in Python).
