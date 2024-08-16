@@ -6,3 +6,29 @@
 Cardiac necrosis employs Machine learning algorithms to analyze the prediction of heart disease, identifying and 
 classifying disease in which part of the heart the blood is blocked. This automated approach facilitates early disease 
 diagnosis, enabling timely intervention to mitigate the patients outcome in early prediction and curing of disease.
+
+## Getting Started
+
+Before you dive into the tutorials and examples in this repository, make sure you have the following prerequisites:
+
+- Basic programming knowledge (preferably in Python).
+- Understanding of fundamental mathematical concepts (linear algebra, calculus, probability).
+- Python 3.x installed on your system.
+
+
+
+## 👉 Directions to download the repository and run the notebook 
+
+1. You'll have to download and install Git which could be used for cloning the repositories that are present.
+2. Once "Git" is downloaded and installed, you'll have to right-click on the location where you would like to download this repository. I would like to store it in the "Git Folder" location. 
+3. If you have successfully installed Git, you'll get an option called "Gitbash Here" when you right-click on a particular location. 
+4. Once the Gitbash terminal opens, you'll need to write "Git clone" and then paste the link to the repository.
+5. The link to the repository can be found when you click on "Code" (Green button) and then, there would be an HTML link just below. Therefore, the command to download a particular repository should be "Git clone HTML" where the HTML is replaced by the link to this repository. 
+6. After successfully downloading the repository, there should be a folder with the name of the repository as can be seen below.
+7. Once the repository is downloaded, go to the start button and search for "Anaconda Prompt" if you have anaconda installed. 
+8. Later, open the Jupyter notebook by writing "Jupyter notebook" in the Anaconda prompt. 
+9. Now the following would open with a list of directories. 
+10. Search for the location where you have downloaded the repository. Be sure to open that folder. 
+11. You might now run the .ipynb files present in the repository to open the notebook and the python code present in it. 
+That's it, you should be able to read the code now. Thanks. 
+
