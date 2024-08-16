@@ -6,7 +6,6 @@ classifying disease in which part of the heart the blood is blocked. This automa
 diagnosis, enabling timely intervention to mitigate the patients outcome in early prediction and curing of disease.
 ## Getting Started
 Before you dive into the tutorials and examples in this repository, make sure you have the following prerequisites:
-
 - Basic programming knowledge (preferably in Python).
 - Understanding of fundamental mathematical concepts (linear algebra, calculus, probability).
 - Python 3.x installed on your system.
