@@ -9,12 +9,8 @@ Before you dive into the tutorials and examples in this repository, make sure yo
 - Basic programming knowledge (preferably in Python).
 - Understanding of fundamental mathematical concepts (linear algebra, calculus, probability).
 - Python 3.x installed on your system.
-
-
 ## Machine Learning Models 
-
 There were many machine learning models used in the process of predicting the __heart diseases__. Below are the models that were used in the process of predicting heart diseases.
-
 * [__K Nearest Neighbors (KNN)__](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
 * [__Logistic Regression__](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 * [__Naive Bayes__](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
